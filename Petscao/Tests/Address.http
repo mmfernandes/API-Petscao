@@ -1,0 +1,34 @@
+
+POST https://localhost:5001/api/Address/post
+Content-Type: application/json
+
+{
+    "Street": "Rua silvio duarte",
+    "Number": 103,
+    "Neighborhood": "Novo mundo",
+    "City": "Curitiba",
+    "CEP": "8745267-78"
+}
+
+### get all addresses 
+GET https://localhost:5001/api/Address/getAll
+
+
+### search by ID or NAME, but it's not searching
+GET https://localhost:5001/api/Address/getByStreet/Equador
+
+### update an existing address by ID 
+PUT https://localhost:5001/api/Address/put/5
+Content-Type: application/json
+
+{ 
+    "Street": "Rua silvio duarte",
+    "Number": 103,
+    "Neighborhood": "Novo Mundo",
+    "City": "Curitiba",
+    "CEP": "8745267-78"
+}
+
+
+### deletion of a address by ID
+DELETE https://localhost:5001/api/Address/delete/6

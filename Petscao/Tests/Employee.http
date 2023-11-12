@@ -1,0 +1,29 @@
+POST https://localhost:5001/api/Employee/post
+Content-Type: application/json
+
+{
+    "Name": "Funcionario Mayara",
+    "CPF": "00010020023",
+    "Phone": "4198264892122",
+    "Email": "funcionario1@teste.com",
+    "AddressId": 7
+}
+
+### get all Customer
+GET https://localhost:5001/api/Employee/getAll
+
+### update an existing Customer by ID 
+PUT https://localhost:5001/api/Employee/put/1
+Content-Type: application/json
+
+{
+    "Name": "Funcionario Mayara 2",
+    "CPF": "12589745822",
+    "Phone": "41988201587",
+    "Email": "teste@teste.com",
+    "AddressId": 7
+}
+
+
+### deletion of a Customer by ID
+DELETE https://localhost:5001/api/Employee/delete/2
