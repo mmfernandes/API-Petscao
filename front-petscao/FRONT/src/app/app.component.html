@@ -8,35 +8,77 @@
 <mat-sidenav-container class="container">
   <mat-sidenav #sidenav [opened]="true" mode="side">
     <mat-nav-list>
-
       <a> <!--ANIMAL-->
         <button mat-button [matMenuTriggerFor]="belowMenu">
           <mat-icon class="icon">pets</mat-icon> Animals
         </button>
         <mat-menu #belowMenu="matMenu" yPosition="below">
           <button mat-menu-item routerLink="/pages/animal/animal-list">
-            <mat-icon class="icon">list</mat-icon> List Animals
+            <mat-icon class="icon">lists</mat-icon> List Animals
           </button>
           <button mat-menu-item routerLink="/pages/animal/animal-register">
-            <mat-icon class="icon">add</mat-icon> Register Animals
+            <mat-icon class="icon">add_circle</mat-icon> Register Animals
           </button>
         </mat-menu>
       </a>
-
+      <br>
       <a> <!--CUSTOMER-->
         <button mat-button [matMenuTriggerFor]="customerMenu">
-          <mat-icon class="icon">person</mat-icon> Customer
+          <mat-icon class="icon"><span class="material-symbols-outlined">
+            account_circle
+            </span></mat-icon> Customer
         </button>
         <mat-menu #customerMenu="matMenu" yPosition="below">
           <button mat-menu-item routerLink="/pages/customer/customer-list">
-            <mat-icon class="icon">list</mat-icon> List Customers
+            <mat-icon class="icon">lists</mat-icon> List Customers
           </button>
           <button mat-menu-item routerLink="/pages/customer/customer-register">
-            <mat-icon class="icon">add</mat-icon> Register Customers
+            <mat-icon class="icon">add_circle</mat-icon> Register Customers
           </button>
         </mat-menu>
       </a>
-      
+      <br>
+      <a> <!--ADDRESS-->
+        <button mat-button [matMenuTriggerFor]="customerMenu">
+          <mat-icon class="icon">location_on</mat-icon> Address
+        </button>
+        <mat-menu #customerMenu="matMenu" yPosition="below">
+          <button mat-menu-item routerLink="/pages/customer/customer-list">
+            <mat-icon class="icon">lists</mat-icon> List Address
+          </button>
+          <button mat-menu-item routerLink="/pages/customer/customer-register">
+            <mat-icon class="icon">add_circle</mat-icon> Register Address
+          </button>
+        </mat-menu>
+      </a>
+      <br>
+      <a> <!--EMPLOYEE-->
+        <button mat-button [matMenuTriggerFor]="customerMenu">
+          <mat-icon class="icon">support_agent</mat-icon> Employee
+        </button>
+        <mat-menu #customerMenu="matMenu" yPosition="below">
+          <button mat-menu-item routerLink="/pages/customer/customer-list">
+            <mat-icon class="icon">lists</mat-icon> List Employee
+          </button>
+          <button mat-menu-item routerLink="/pages/customer/customer-register">
+            <mat-icon class="icon">add_circle</mat-icon> Register Employee
+          </button>
+        </mat-menu>
+      </a>
+      <br>
+      <a> <!--TIMELINE-->
+        <button mat-button [matMenuTriggerFor]="customerMenu">
+          <mat-icon class="icon">calendar_month</mat-icon> Timeline
+        </button>
+        <mat-menu #customerMenu="matMenu" yPosition="below">
+          <button mat-menu-item routerLink="/pages/customer/customer-list">
+            <mat-icon class="icon">lists</mat-icon> List Timeline
+          </button>
+          <button mat-menu-item routerLink="/pages/customer/customer-register">
+            <mat-icon class="icon">add_circle</mat-icon> Register Timeline
+          </button>
+        </mat-menu>
+      </a>
     </mat-nav-list>
     <!-- <a routerLink="/pages/produto/cadastrar"> Cadastrar </a> -->
   </mat-sidenav>
