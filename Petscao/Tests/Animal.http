@@ -2,8 +2,8 @@ POST https://localhost:5001/api/Animal/post
 Content-Type: application/json
 
 {
-    "Name": "Eros",
-    "Breed": "Gatinho Branco",
+    "Name": "Gatinha Noturna",
+    "Breed": "Black Cat",
     "CustomerId": 3
 }
 

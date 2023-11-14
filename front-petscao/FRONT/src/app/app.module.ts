@@ -12,19 +12,25 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
+import {MatMenuModule} from '@angular/material/menu';
 
+
+import { FormsModule } from "@angular/forms";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { AnimalListComponent } from "./pages/animal/animal-list/animal-list.component";
-import { FormsModule } from "@angular/forms";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-
-
+import { AnimalRegisterComponent } from "./pages/animal/animal-register/animal-register.component";
+import { CustomerRegisterComponent } from "./pages/customer/customer-register/customer-register.component";
+import { CustomerListComponent } from "./pages/customer/customer-list/customer-list.component";
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent, 
     AnimalListComponent,
+    AnimalRegisterComponent,
+    CustomerRegisterComponent,
+    CustomerListComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +39,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     FormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatMenuModule,
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,

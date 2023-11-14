@@ -1,25 +1,25 @@
+import { Customer } from 'src/app/models/customer.model';
 import { HttpClient } from "@angular/common/http";
 import { Component } from "@angular/core";
 import { MatSnackBar } from "@angular/material/snack-bar";
-import { Animal } from "src/app/models/animal.model";
  import {
    MatTable,
    MatTableDataSource,
  } from "@angular/material/table";
- 
-@Component({
-  selector: "app-animal-list",
-  templateUrl: "./animal-list.component.html",
-  styleUrls: ["./animal-list.component.css"],
+
+ @Component({
+  selector: "app-customer-list",
+  templateUrl: "./customer-list.component.html",
+  styleUrls: ["./customer-list.component.css"],
 })
-export class AnimalListComponent {
-  columnsTable: string [] = [
+export class CustomerListComponent {
+  columnsTableCustomer: string [] = [
     "id",
     "name",
-    "breed",
-    "createdAt",
+    "cpf",
+    "createdAt" 
   ];
-  animals: Animal[] = []; 
+  customers: Customer[] = []; 
 
   constructor(
     private client: HttpClient,
@@ -29,12 +29,12 @@ export class AnimalListComponent {
   }
   ngOnInit(): void {
     this.client
-      .get<Animal[]>("https://localhost:5001/api/Animal/getAll")
+      .get<Customer[]>("https://localhost:5001/api/Customer/getAll")
       .subscribe({
         //Requisição com sucesso
-        next: (animals) => {
-          console.table(animals);
-          this.animals = animals;
+        next: (customers) => {
+          console.table(customers);
+          this.customers = customers;
         },
         //Requisição com erro
         error: (erro) => {

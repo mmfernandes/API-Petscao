@@ -8,12 +8,35 @@
 <mat-sidenav-container class="container">
   <mat-sidenav #sidenav [opened]="true" mode="side">
     <mat-nav-list>
-      <a mat-list-item routerLink="/pages/animal/animal-list">
-        <div class="item">
-          <mat-icon class="icon"> list </mat-icon>
-          <span> Listar </span>
-        </div>
+
+      <a> <!--ANIMAL-->
+        <button mat-button [matMenuTriggerFor]="belowMenu">
+          <mat-icon class="icon">pets</mat-icon> Animals
+        </button>
+        <mat-menu #belowMenu="matMenu" yPosition="below">
+          <button mat-menu-item routerLink="/pages/animal/animal-list">
+            <mat-icon class="icon">list</mat-icon> List Animals
+          </button>
+          <button mat-menu-item routerLink="/pages/animal/animal-register">
+            <mat-icon class="icon">add</mat-icon> Register Animals
+          </button>
+        </mat-menu>
       </a>
+
+      <a> <!--CUSTOMER-->
+        <button mat-button [matMenuTriggerFor]="customerMenu">
+          <mat-icon class="icon">person</mat-icon> Customer
+        </button>
+        <mat-menu #customerMenu="matMenu" yPosition="below">
+          <button mat-menu-item routerLink="/pages/customer/customer-list">
+            <mat-icon class="icon">list</mat-icon> List Customers
+          </button>
+          <button mat-menu-item routerLink="/pages/customer/customer-register">
+            <mat-icon class="icon">add</mat-icon> Register Customers
+          </button>
+        </mat-menu>
+      </a>
+      
     </mat-nav-list>
     <!-- <a routerLink="/pages/produto/cadastrar"> Cadastrar </a> -->
   </mat-sidenav>
