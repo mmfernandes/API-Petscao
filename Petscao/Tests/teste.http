@@ -1,0 +1,2 @@
+### get all Customer 
+GET https://localhost:5001/api/Supplier/getAll

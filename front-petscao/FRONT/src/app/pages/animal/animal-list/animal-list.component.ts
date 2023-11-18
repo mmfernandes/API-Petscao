@@ -1,11 +1,8 @@
 import { HttpClient } from "@angular/common/http";
 import { Component } from "@angular/core";
 import { MatSnackBar } from "@angular/material/snack-bar";
+import { Router } from "@angular/router";
 import { Animal } from "src/app/models/animal.model";
- import {
-   MatTable,
-   MatTableDataSource,
- } from "@angular/material/table";
  
 @Component({
   selector: "app-animal-list",
@@ -22,12 +19,12 @@ export class AnimalListComponent {
   animals: Animal[] = []; 
 
   constructor(
-    private client: HttpClient,
-    private snackBar: MatSnackBar
-  ) {
-    //Um problema de CORS ao fazer uma requisição para a nossa API
-  }
-  ngOnInit(): void {
+    private readonly client: HttpClient,
+    private readonly snackBar: MatSnackBar,
+    private readonly router: Router
+  ) {}
+
+  public ngOnInit(): void {
     this.client
       .get<Animal[]>("https://localhost:5001/api/Animal/getAll")
       .subscribe({
@@ -46,4 +43,8 @@ export class AnimalListComponent {
         },
       });
   }
-}//end component
+
+  public openForm(){
+    this.router.navigate(['pages/animal/animal-register'])
+  }
+}

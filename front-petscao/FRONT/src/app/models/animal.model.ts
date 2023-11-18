@@ -1,4 +1,5 @@
 import { Customer } from 'src/app/models/customer.model';
+
 export interface Animal{
     
     animalId?: number;

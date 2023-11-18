@@ -19,7 +19,7 @@ export class AnimalRegisterComponent {
   constructor(
     private client: HttpClient,
     private router: Router,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
   ) {}
 
   ngOnInit(): void {
@@ -71,5 +71,9 @@ export class AnimalRegisterComponent {
           console.log(erro);
         },
       });
+  }
+
+  public voltar(){
+    this.router.navigate(['pages/animal/animal-list'])
   }
 }

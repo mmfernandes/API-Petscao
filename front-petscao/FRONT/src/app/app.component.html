@@ -9,17 +9,9 @@
   <mat-sidenav #sidenav [opened]="true" mode="side">
     <mat-nav-list>
       <a> <!--ANIMAL-->
-        <button mat-button [matMenuTriggerFor]="belowMenu">
+        <button mat-button routerLink="/pages/animal/animal-list">
           <mat-icon class="icon">pets</mat-icon> Animals
         </button>
-        <mat-menu #belowMenu="matMenu" yPosition="below">
-          <button mat-menu-item routerLink="/pages/animal/animal-list">
-            <mat-icon class="icon">lists</mat-icon> List Animals
-          </button>
-          <button mat-menu-item routerLink="/pages/animal/animal-register">
-            <mat-icon class="icon">add_circle</mat-icon> Register Animals
-          </button>
-        </mat-menu>
       </a>
       <br>
       <a> <!--CUSTOMER-->

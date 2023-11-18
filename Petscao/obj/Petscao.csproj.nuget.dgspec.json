@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\API-Petscao\\Petscao\\Petscao.csproj": {}
+    "C:\\GIT\\API-Petscao\\Petscao\\Petscao.csproj": {}
   },
   "projects": {
-    "C:\\dev\\API-Petscao\\Petscao\\Petscao.csproj": {
+    "C:\\GIT\\API-Petscao\\Petscao\\Petscao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\API-Petscao\\Petscao\\Petscao.csproj",
+        "projectUniqueName": "C:\\GIT\\API-Petscao\\Petscao\\Petscao.csproj",
         "projectName": "Petscao",
-        "projectPath": "C:\\dev\\API-Petscao\\Petscao\\Petscao.csproj",
-        "packagesPath": "C:\\Users\\SD Técnico\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\API-Petscao\\Petscao\\obj\\",
+        "projectPath": "C:\\GIT\\API-Petscao\\Petscao\\Petscao.csproj",
+        "packagesPath": "C:\\Users\\brend\\.nuget\\packages\\",
+        "outputPath": "C:\\GIT\\API-Petscao\\Petscao\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\SD Técnico\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\brend\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -76,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.417\\RuntimeIdentifierGraph.json"
         }
       }
     }
