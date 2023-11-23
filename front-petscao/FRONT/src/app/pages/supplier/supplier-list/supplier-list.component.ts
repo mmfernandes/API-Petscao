@@ -49,4 +49,28 @@ export class SupplierListComponent {
   public openPost(){
     this.router.navigate(['pages/supplier/supplier-register'])
   }
+
+  deletar(supplierId: number) {
+    this.client
+      .delete<Supplier[]>(
+        `https://localhost:5001/api/Supplier/delete/${supplierId}`
+      )
+      .subscribe({
+        next: (suppliers) => {
+          this.suppliers = suppliers;
+          this.snackBar.open(
+            "Fornecedor deletado com sucesso!!",
+            "PetShop",
+            {
+              duration: 1500,
+              horizontalPosition: "right",
+              verticalPosition: "top",
+            }
+          );
+        },
+        error: (erro) => {
+          console.log(erro);
+        },
+      });
+  }
 }

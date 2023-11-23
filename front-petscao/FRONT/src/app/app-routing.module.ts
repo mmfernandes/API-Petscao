@@ -9,6 +9,7 @@ import { AddressListComponent } from "./pages/address/address-list/address-list.
 import { AnimalUpdateComponent } from "./pages/animal/animal-update/animal-update.component";
 import { SupplierListComponent } from "./pages/supplier/supplier-list/supplier-list.component";
 import { SupplierRegisterComponent } from "./pages/supplier/supplier-register/supplier-register.component";
+import { SupplierUpdateComponent } from "./pages/supplier/supplier-update/supplier-update.component";
 
 
 const routes: Routes = [
@@ -63,6 +64,10 @@ const routes: Routes = [
   {
     path: "pages/supplier/supplier-register",
     component: SupplierRegisterComponent,
+  },
+  {
+    path: "pages/supplier/supplier-update/:id",
+    component: SupplierUpdateComponent,
   },
 ];
 

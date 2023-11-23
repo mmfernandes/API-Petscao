@@ -2,20 +2,23 @@ import { HttpClient } from "@angular/common/http";
 import { Component } from "@angular/core";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { ActivatedRoute, Router } from "@angular/router";
-import { Animal } from "src/app/models/animal.model";
-import { Customer } from "src/app/models/customer.model";
+import { Address } from "src/app/models/address.model";
+import { Supplier } from "src/app/models/supplier.models";
 
 @Component({
-    selector: "app-animal-update",
-    templateUrl: "./animal-update.component.html",
-    styleUrls: ["./animal-update.component.css"],
+    selector: "app-supplier-update",
+    templateUrl: "./supplier-update.component.html",
+    styleUrls: ["./supplier-update.component.css"],
 })
-export class AnimalUpdateComponent {
-    animalId: number = 0;
-    name: string = "";
-    breed: string = "";
-    customerId: number = 0;
-    customers: Customer[] = [];
+export class SupplierUpdateComponent {
+    supplierId: number = 0;
+    corporateReason: string = "";
+    fantasyName: string = "";
+    cnpj: string = "";
+    phone: string = "";
+    email: string = "";
+    addressId: number = 0;
+    addresses: Address[] = [];
 
     constructor(
         private client: HttpClient,
@@ -29,26 +32,28 @@ export class AnimalUpdateComponent {
             next: (parametros) => {
                 let { id } = parametros;
                 this.client
-                    .get<Animal>(`https://localhost:5001/api/Animal/getById/${id}`)
+                    .get<Supplier>(`https://localhost:5001/api/Supplier/getById/${id}`)
                     .subscribe({
-                        next: (animal) => {
+                        next: (supplier) => {
                             this.client
-                                .get<Customer[]>("https://localhost:5001/api/Customer/getAll")
+                                .get<Address[]>("https://localhost:5001/api/Address/getAll")
                                 .subscribe({
-                                    next: (customers) => {
-                                        this.customers = customers;
+                                    next: (addresses) => {
+                                        this.addresses = addresses;
 
-                                        this.animalId = animal.animalId!;
-                                        this.name = animal.name;
-                                        this.breed = animal.breed;
-                                        this.customerId = animal.customerId;
+                                        this.supplierId = supplier.supplierId!;
+                                        this.corporateReason = supplier.corporateReason;
+                                        this.fantasyName = supplier.fantasyName;
+                                        this.cnpj = supplier.cnpj;
+                                        this.phone = supplier.phone;
+                                        this.email = supplier.email;
+                                        this.addressId = supplier.addressId;
                                     },
                                     error: (erro) => {
                                         console.log(erro);
                                     },
                                 });
                             },
-                            //Requisição com erro
                             error: (erro) => {
                                 console.log(erro);
                             },
@@ -58,25 +63,26 @@ export class AnimalUpdateComponent {
     }
 
     alterar(): void {
-        let animal: Animal = {
-            name: this.name,
-            breed: this.breed,
-            customerId: this.customerId,
+        let supplier: Supplier = {
+            corporateReason: this.corporateReason,
+            fantasyName: this.fantasyName,
+            cnpj: this.cnpj,
+            phone: this.phone,
+            email: this.email,
+            addressId: this.addressId,
         };
 
         this.client
-            .put<Animal>(`https://localhost:5001/api/Animal/put/${this.animalId}`, animal)
+            .put<Supplier>(`https://localhost:5001/api/Supplier/put/${this.supplierId}`, supplier)
             .subscribe({
-                //A requição funcionou
             next: (produto) => {
-                this.snackBar.open("Animal alterado com sucesso!!", "PetShop", {
+                this.snackBar.open("Fornecedor alterado com sucesso!!", "PetShop", {
                     duration: 1500,
                     horizontalPosition: "right",
                     verticalPosition: "top",
                 });
-                this.router.navigate(["pages/animal/animal-list"]);
+                this.router.navigate(["pages/supplier/supplier-list"]);
             },
-            //A requição não funcionou
             error: (erro) => {
             console.log(erro);
             },

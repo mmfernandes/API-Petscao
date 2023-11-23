@@ -1,37 +1,67 @@
 <mat-card>
     <mat-card-header>
-      <mat-card-title>Alterar Animal</mat-card-title>
+      <mat-card-title>Alterar Fornecedor</mat-card-title>
     </mat-card-header>
 
     <mat-card-content>
-      <mat-form-field class="input" id="name">
-        <mat-label>Nome</mat-label>
+      <mat-form-field class="input" id="corporateReason">
+        <mat-label>Razão Social</mat-label>
         <input
-          placeholder="Nome do animal"
+        placeholder="Nome da empresa"
           matInput
           type="text"
-          [(ngModel)]="name"
+          [(ngModel)]="corporateReason"
         />
       </mat-form-field>
 
-      <mat-form-field class="input" id="breed">
-        <mat-label>Raça</mat-label>
+      <mat-form-field class="input" id="fantasyName">
+        <mat-label>Nome Fantasia</mat-label>
         <input
-          placeholder="Ex. Yorkshire"
+          placeholder="Nome fantasia da empresa"
           matInput
           type="text"
-          [(ngModel)]="breed"
+          [(ngModel)]="fantasyName"
         />
       </mat-form-field>
 
-      <mat-form-field class="input" id="customer">
-        <mat-label>Customer</mat-label>
-        <mat-select [(ngModel)]="customerId">
+      <mat-form-field class="input" id="cnpj">
+        <mat-label>CNPJ</mat-label>
+        <input
+          placeholder="CNPJ"
+          matInput
+          type="text"
+          [(ngModel)]="cnpj"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input" id="phone">
+        <mat-label>Telefone</mat-label>
+        <input
+          placeholder="Telefone"
+          matInput
+          type="text"
+          [(ngModel)]="phone"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input" id="email">
+        <mat-label>Email</mat-label>
+        <input
+          placeholder="Email"
+          matInput
+          type="text"
+          [(ngModel)]="email"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input" id="address">
+        <mat-label>Endereço</mat-label>
+        <mat-select [(ngModel)]="addressId">
           <mat-option
-            *ngFor="let c of customers"
-            [value]="c.customerId"
+            *ngFor="let a of addresses"
+            [value]="a.addressId"
           >
-            {{ c.name }}
+            {{ a.street }}
           </mat-option>
         </mat-select>
       </mat-form-field>

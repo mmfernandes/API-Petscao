@@ -43,6 +43,29 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
+        [Route("getById/{id}")]
+        public IActionResult GetById([FromRoute] int id)
+        {
+            try
+            {
+                Supplier supplier = _ctx.Suppliers
+                    .Include(x => x.Address)
+                    .FirstOrDefault(x => x.SupplierId == id);
+
+                if (supplier != null)
+                {
+                    return Ok(supplier);
+                }
+
+                return NotFound($"Fornecedor com o id '{id}' não encontrado.");
+            }
+            catch (Exception e)
+            {
+                return BadRequest($"Erro ao buscar fornecedor: {e.Message}");
+            }
+        }
+
+        [HttpGet]
         [Route("getByString/{name}")]
         public IActionResult GetByName([FromRoute] string name)
         {
