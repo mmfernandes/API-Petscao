@@ -14,7 +14,9 @@ export class AnimalListComponent {
     "id",
     "name",
     "breed",
-    "createdAt",
+    "customer",
+    "alterar",
+    "deletar"
   ];
   animals: Animal[] = []; 
 
@@ -28,23 +30,21 @@ export class AnimalListComponent {
     this.client
       .get<Animal[]>("https://localhost:5001/api/Animal/getAll")
       .subscribe({
-        //Requisição com sucesso
         next: (animals) => {
           console.table(animals);
           this.animals = animals;
         },
-        //Requisição com erro
         error: (erro) => {
           console.log(erro);
           this.snackBar.open('Erro ao obter dados do servidor', '', {
-            duration: 3000, // 3 segundos
+            duration: 3000,
           });
           
         },
       });
   }
 
-  public openForm(){
+  public openPost(){
     this.router.navigate(['pages/animal/animal-register'])
   }
 }

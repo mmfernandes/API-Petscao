@@ -44,22 +44,22 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("getByName/{name}")]
-        public IActionResult GetByName([FromRoute] string name)
+        [Route("getById/{id}")]
+        public IActionResult GetById([FromRoute] int id)
         {
             try
             {
                 Animal animal =
                     _ctx.Animals
                     .Include(x => x.Customer)
-                    .FirstOrDefault(x => x.Name == name);
+                    .FirstOrDefault(x => x.AnimalId == id);
 
                 if (animal != null)
                 {
                     return Ok(animal);
                 }
 
-                return NotFound($"Animal com o nome '{name}' não encontrado.");
+                return NotFound($"Animal com o id '{id}' não encontrado.");
             }
             catch (Exception e)
             {

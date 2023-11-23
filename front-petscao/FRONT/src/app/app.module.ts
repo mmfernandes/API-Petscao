@@ -23,12 +23,14 @@ import { CustomerRegisterComponent } from "./pages/customer/customer-register/cu
 import { CustomerListComponent } from "./pages/customer/customer-list/customer-list.component";
 import { AddressRegisterComponent } from "./pages/address/address-register/address-register.component";
 import { AddressListComponent } from "./pages/address/address-list/address-list.component";
+import { AnimalUpdateComponent } from "./pages/animal/animal-update/animal-update.component";
 
 @NgModule({
   declarations: [
     AppComponent, 
     AnimalListComponent,
     AnimalRegisterComponent,
+    AnimalUpdateComponent,
     CustomerRegisterComponent,
     CustomerListComponent,
     AddressRegisterComponent,

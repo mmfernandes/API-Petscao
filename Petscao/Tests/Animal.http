@@ -11,8 +11,8 @@ Content-Type: application/json
 GET https://localhost:5001/api/Animal/getAll
 
 
-### search by ID or NAME, but it's not searching
-GET https://localhost:5001/api/Animal/getByName/Eros
+### search by ID 
+GET https://localhost:5001/api/Animal/getById/4
 
 ### update an existing address by ID 
 PUT https://localhost:5001/api/Animal/put/1
