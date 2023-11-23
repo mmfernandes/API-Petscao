@@ -1,0 +1,28 @@
+table {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    align-content: center;
+  }
+    
+  td, th {
+    text-align: center;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+    
+  title {
+    
+  }
+  
+  button {
+    margin-bottom: 10px;
+  }

@@ -1,0 +1,30 @@
+<div>
+  <header>
+    <span>services</span>
+    <button type="button" mat-raised-button color="primary" (click)="openForm()">Adicionar</button>
+  </header>
+
+  <h1> Listar Serviços </h1>
+  <table id="table">
+    <tr id="tr">
+      <th id="th">#</th>
+      <th> Nome</th>
+      <th>Descrição</th>
+      <th>Código</th>
+      <th>Preço</th>
+      <th>Criado em </th>
+    </tr>
+    <tr *ngFor = "let service of services">
+      <td>{{service.serviceId}}</td>
+      <td>{{service.name}}</td>
+      <td>{{service.description}}</td>
+      <td>{{service.code}}</td>
+      <td>{{service.unitPrice}}</td>
+      <td>{{service.createdAt}}</td>
+
+
+    </tr>
+  
+
+    </table>
+</div>

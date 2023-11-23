@@ -4,6 +4,7 @@ import { AnimalRegisterComponent } from './pages/animal/animal-register/animal-r
 import { AnimalListComponent } from './pages/animal/animal-list/animal-list.component';
 import { CustomerRegisterComponent } from './pages/customer/customer-register/customer-register.component';
 import { CustomerListComponent } from './pages/customer/customer-list/customer-list.component';
+import { ServiceListComponent } from "./pages/service/service-list/service-list.component";
 
 
 const routes: Routes = [
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: "pages/customer/customer-list",
     component: CustomerListComponent,
+  },
+  {
+    path: "pages/service/service-list",
+    component: ServiceListComponent,
   },
 ];
 
