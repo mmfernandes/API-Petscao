@@ -40,7 +40,8 @@ export class AnimalRegisterComponent {
       });
   }
 
-  cadastrar(): void {
+  cadastrar(): void 
+  {
     let animal: Animal = {
       name: this.name,
       breed: this.breed,
