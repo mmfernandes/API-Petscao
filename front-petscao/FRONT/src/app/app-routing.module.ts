@@ -7,6 +7,8 @@ import { CustomerListComponent } from './pages/customer/customer-list/customer-l
 import { AddressRegisterComponent } from "./pages/address/address-register/address-register.component";
 import { AddressListComponent } from "./pages/address/address-list/address-list.component";
 import { AnimalUpdateComponent } from "./pages/animal/animal-update/animal-update.component";
+import { SupplierListComponent } from "./pages/supplier/supplier-list/supplier-list.component";
+import { SupplierRegisterComponent } from "./pages/supplier/supplier-register/supplier-register.component";
 
 
 const routes: Routes = [
@@ -49,6 +51,18 @@ const routes: Routes = [
   {
     path: "pages/address/address-list",
     component: AddressListComponent,
+  },
+  {
+    path: "",
+    component: SupplierListComponent,
+  },
+  {
+    path: "pages/supplier/supplier-list",
+    component: SupplierListComponent,
+  },
+  {
+    path: "pages/supplier/supplier-register",
+    component: SupplierRegisterComponent,
   },
 ];
 

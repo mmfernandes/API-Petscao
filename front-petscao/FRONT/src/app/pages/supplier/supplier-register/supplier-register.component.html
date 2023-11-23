@@ -1,0 +1,79 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Cadastrar Fornecedor</mat-card-title>
+    </mat-card-header>
+  
+    <mat-card-content>
+      <mat-form-field class="input" id="corporateReason">
+        <mat-label>Razão Social</mat-label>
+        <input
+          placeholder="Nome da empresa"
+          matInput
+          type="text"
+          [(ngModel)]="corporateReason"
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input" id="fantasyName">
+        <mat-label>Nome Fantasia</mat-label>
+        <input
+          placeholder="Nome fantasia da empresa"
+          matInput
+          type="text"
+          [(ngModel)]="fantasyName"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input" id="cnpj">
+        <mat-label>CNPJ</mat-label>
+        <input
+          placeholder="CNPJ"
+          matInput
+          type="text"
+          [(ngModel)]="cnpj"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input" id="phone">
+        <mat-label>Telefone</mat-label>
+        <input
+          placeholder="Telefone"
+          matInput
+          type="text"
+          [(ngModel)]="phone"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input" id="email">
+        <mat-label>Email</mat-label>
+        <input
+          placeholder="Email"
+          matInput
+          type="text"
+          [(ngModel)]="email"
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input" id="address">
+        <mat-label>Endereço</mat-label>
+        <mat-select [(ngModel)]="addressId">
+          <mat-option
+            *ngFor="let a of addresses"
+            [value]="a.addressId"
+          >
+            {{ a.street }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-stroked-button color="primary" (click)="voltar()">
+        Voltar
+      </button>
+      <button color="warn" mat-stroked-button (click)="cadastrar()">
+        Salvar
+      </button>
+    </mat-card-actions>
+  </mat-card>
+  

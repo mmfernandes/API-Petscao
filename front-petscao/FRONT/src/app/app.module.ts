@@ -24,15 +24,23 @@ import { CustomerListComponent } from "./pages/customer/customer-list/customer-l
 import { AddressRegisterComponent } from "./pages/address/address-register/address-register.component";
 import { AddressListComponent } from "./pages/address/address-list/address-list.component";
 import { AnimalUpdateComponent } from "./pages/animal/animal-update/animal-update.component";
+import { SupplierListComponent } from "./pages/supplier/supplier-list/supplier-list.component";
+import { SupplierRegisterComponent } from "./pages/supplier/supplier-register/supplier-register.component";
 
 @NgModule({
   declarations: [
-    AppComponent, 
+    AppComponent,
+
     AnimalListComponent,
     AnimalRegisterComponent,
     AnimalUpdateComponent,
+
     CustomerRegisterComponent,
     CustomerListComponent,
+
+    SupplierListComponent,
+    SupplierRegisterComponent,
+
     AddressRegisterComponent,
     AddressListComponent
   ],

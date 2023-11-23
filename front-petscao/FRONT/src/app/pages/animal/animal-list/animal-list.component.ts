@@ -47,4 +47,28 @@ export class AnimalListComponent {
   public openPost(){
     this.router.navigate(['pages/animal/animal-register'])
   }
+
+  deletar(animalId: number) {
+    this.client
+      .delete<Animal[]>(
+        `https://localhost:5001/api/Animal/delete/${animalId}`
+      )
+      .subscribe({
+        next: (animals) => {
+          this.animals = animals;
+          this.snackBar.open(
+            "Animal deletado com sucesso!!",
+            "PetShop",
+            {
+              duration: 1500,
+              horizontalPosition: "right",
+              verticalPosition: "top",
+            }
+          );
+        },
+        error: (erro) => {
+          console.log(erro);
+        },
+      });
+  }
 }
