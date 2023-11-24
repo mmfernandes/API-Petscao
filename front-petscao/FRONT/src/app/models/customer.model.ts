@@ -1,6 +1,6 @@
 import { Address } from './address.model';
 
-export interface Customer{
+export interface Customer {
     customerId?: number;
     name: string;
     cpf: string;
