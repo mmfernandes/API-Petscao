@@ -1,6 +1,6 @@
 import { Customer } from 'src/app/models/customer.model';
 
-export interface Animal{
+export interface Animal {
     
     animalId?: number;
     name: string;
@@ -8,5 +8,4 @@ export interface Animal{
     createdAt?: string; 
     customerId: number; 
     customer?: Customer; 
-
 }

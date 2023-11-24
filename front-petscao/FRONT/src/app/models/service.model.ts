@@ -1,4 +1,4 @@
-export interface Service{
+export interface Service {
     
     serviceId?: number;
     name: string;
@@ -6,5 +6,4 @@ export interface Service{
     code: string; 
     unitPrice: number;
     createdAt?: string; 
-
 }

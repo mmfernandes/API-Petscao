@@ -1,4 +1,4 @@
-export interface Address{
+export interface Address {
     
     addressId?: number;
     street: string;
@@ -7,5 +7,4 @@ export interface Address{
     city: string;
     cep: string; 
     createdAt?: string; 
-
 }
