@@ -2,23 +2,26 @@ import { HttpClient } from "@angular/common/http";
 import { Component } from "@angular/core";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { Router } from "@angular/router";
-import { Animal } from "src/app/models/animal.model";
+import { Supplier } from "src/app/models/supplier.models";
  
 @Component({
-  selector: "app-animal-list",
-  templateUrl: "./animal-list.component.html",
-  styleUrls: ["./animal-list.component.css"],
+  selector: "app-supplier-list",
+  templateUrl: "./supplier-list.component.html",
+  styleUrls: ["./supplier-list.component.css"],
 })
-export class AnimalListComponent {
+export class SupplierListComponent {
   columnsTable: string [] = [
     "id",
-    "name",
-    "breed",
-    "customer",
+    "corporateReason",
+    "fantasyName",
+    "cnpj",
+    "phone",
+    "email",
+    "address",
     "alterar",
     "deletar"
   ];
-  animals: Animal[] = []; 
+  suppliers: Supplier[] = []; 
 
   constructor(
     private readonly client: HttpClient,
@@ -28,11 +31,10 @@ export class AnimalListComponent {
 
   public ngOnInit(): void {
     this.client
-      .get<Animal[]>("https://localhost:5001/api/Animal/getAll")
+      .get<Supplier[]>("https://localhost:5001/api/Supplier/getAll")
       .subscribe({
-        next: (animals) => {
-          console.table(animals);
-          this.animals = animals;
+        next: (suppliers) => {
+          this.suppliers = suppliers;
         },
         error: (erro) => {
           console.log(erro);
@@ -45,19 +47,19 @@ export class AnimalListComponent {
   }
 
   public openPost(){
-    this.router.navigate(['pages/animal/animal-register'])
+    this.router.navigate(['pages/supplier/supplier-register'])
   }
 
-  deletar(animalId: number) {
+  deletar(supplierId: number) {
     this.client
-      .delete<Animal[]>(
-        `https://localhost:5001/api/Animal/delete/${animalId}`
+      .delete<Supplier[]>(
+        `https://localhost:5001/api/Supplier/delete/${supplierId}`
       )
       .subscribe({
-        next: (animals) => {
-          this.animals = animals;
+        next: (suppliers) => {
+          this.suppliers = suppliers;
           this.snackBar.open(
-            "Animal deletado com sucesso!!",
+            "Fornecedor deletado com sucesso!!",
             "PetShop",
             {
               duration: 1500,
