@@ -4,31 +4,32 @@ import { Service } from 'src/app/models/service.model';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
+import { Router } from '@angular/router';
 
 
 @Component({
   selector: 'app-service-list',
-  standalone: true,
-  imports: [CommonModule],
+  // imports: [CommonModule],
   templateUrl: './service-list.component.html',
   styleUrl: './service-list.component.css'
 })
 export class ServiceListComponent {
-  columsTableService: string[] = [
-    // "serviceId",
-    // "name",
-    // "description",
-    // "code",
-    // "unitPrice",
-    // "createdAt"
+  columnsTable: string[] = [
+    "serviceId",
+    "name",
+    "description",
+    "code",
+    "unitPrice",
+    "createdAt"
   ];
   services: Service[] = [];
-  router: any;
 
 
   constructor(
     private client: HttpClient,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private readonly router: Router
+
   ) {
     //Um problema de CORS ao fazer uma requisição para a nossa API
   }
@@ -52,6 +53,6 @@ export class ServiceListComponent {
       });
   }
   public openForm(){
-    this.router.navigate(['pages/animal/animal-register'])
+    this.router.navigate(['pages/service/service-register'])
   }
 }

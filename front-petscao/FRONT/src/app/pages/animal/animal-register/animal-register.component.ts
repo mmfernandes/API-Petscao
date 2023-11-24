@@ -11,10 +11,10 @@ import { Animal } from 'src/app/models/animal.model';
   styleUrls: ["./animal-register.component.css"],
 })
 export class AnimalRegisterComponent {
-  name: string = "";
-  breed: string = "";
-  customerId: number = 0;
-  customers: Customer[] = [];
+    name: string = "";
+    breed: string = "";
+    customerId: number = 0;
+    customers: Customer[] = [];
 
   constructor(
     private client: HttpClient,
@@ -40,7 +40,8 @@ export class AnimalRegisterComponent {
       });
   }
 
-  cadastrar(): void {
+  cadastrar(): void 
+  {
     let animal: Animal = {
       name: this.name,
       breed: this.breed,

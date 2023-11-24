@@ -6,6 +6,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatListModule } from "@angular/material/list";
+import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from "@angular/material/card";
 import { MatSelectModule } from "@angular/material/select";
 import { MatInputModule } from "@angular/material/input";
@@ -20,16 +21,24 @@ import { AnimalListComponent } from "./pages/animal/animal-list/animal-list.comp
 import { AnimalRegisterComponent } from "./pages/animal/animal-register/animal-register.component";
 import { CustomerRegisterComponent } from "./pages/customer/customer-register/customer-register.component";
 import { CustomerListComponent } from "./pages/customer/customer-list/customer-list.component";
-import { MatTableModule } from "@angular/material/table";
-
-
+import { AddressRegisterComponent } from "./pages/address/address-register/address-register.component";
+import { AddressListComponent } from "./pages/address/address-list/address-list.component";
+import { AnimalUpdateComponent } from "./pages/animal/animal-update/animal-update.component";
+import { ServiceListComponent } from "./pages/service/service-list/service-list.component";
+import { ServiceRegisterComponent } from "./pages/service/service-register/service-register.component";
 @NgModule({
   declarations: [
     AppComponent, 
     AnimalListComponent,
     AnimalRegisterComponent,
+    AnimalUpdateComponent,
     CustomerRegisterComponent,
-    CustomerListComponent
+    CustomerListComponent,
+    AddressRegisterComponent,
+    AddressListComponent,
+    ServiceListComponent,
+    ServiceRegisterComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -49,8 +58,6 @@ import { MatTableModule } from "@angular/material/table";
     MatInputModule,
     MatFormFieldModule,
     MatSnackBarModule,
-    
-
   ],
   providers: [],
   bootstrap: [AppComponent],

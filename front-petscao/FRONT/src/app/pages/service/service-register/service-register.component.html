@@ -1,1 +1,36 @@
-<p>service-register works!</p>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Cadastrar</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field class="input" id="name">
+            <mat-label>Nome:</mat-label>
+            <input placeholder="Nome do serviço" matInput type="text" [(ngModel)]="name" />
+        </mat-form-field>
+
+        <mat-form-field class="input" id="description">
+            <mat-label>Descrição do serviço</mat-label>
+            <input placeholder="Ex. Banho e tosa" matInput type="text" [(ngModel)]="description" />
+        </mat-form-field>
+
+        <mat-form-field class="input" id="code">
+            <mat-label>Código</mat-label>
+            <input placeholder="Ex. 123" matInput type="text" [(ngModel)]="code" />
+        </mat-form-field>
+
+        <mat-form-field class="input" id="unirPrice">
+            <mat-label>Valor: </mat-label>
+            <input placeholder="Ex. 25" matInput type="number" [(ngModel)]="unirPrice" />
+        </mat-form-field>
+
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-stroked-button color="primary" (click)="voltar()">
+            Voltar
+        </button>
+        <button color="warn" mat-stroked-button (click)="cadastrarService()">
+            Salvar
+        </button>
+    </mat-card-actions>
+</mat-card>

@@ -2,7 +2,7 @@ export interface Address{
     
     addressId?: number;
     street: string;
-    number: string;
+    number: number;
     neighborhood: string; 
     city: string;
     cep: string; 

@@ -1,1 +1,40 @@
-<p>address-register works!</p>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Cadastrar</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field class="input" id="street">
+            <mat-label>Rua</mat-label>
+            <input placeholder="Nome da rua" matInput type="text" [(ngModel)]="street" />
+        </mat-form-field>
+
+        <mat-form-field class="input" id="number">
+            <mat-label>Número</mat-label>
+            <input placeholder="Ex. 156" matInput type="number" [(ngModel)]="number" />
+        </mat-form-field>
+
+        <mat-form-field class="input" id="neighborhood">
+            <mat-label>Bairro</mat-label>
+            <input placeholder="Ex. Boqueirão" matInput type="text" [(ngModel)]="neighborhood" />
+        </mat-form-field>
+
+        <mat-form-field class="input" id="city">
+            <mat-label>Cidade</mat-label>
+            <input placeholder="Ex. Curitiba" matInput type="text" [(ngModel)]="city" />
+        </mat-form-field>
+
+        <mat-form-field class="input" id="cep">
+            <mat-label>CEP</mat-label>
+            <input placeholder="Ex. 80000-000" matInput type="text" [(ngModel)]="cep" />
+        </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-stroked-button color="primary" (click)="voltar()">
+            Voltar
+        </button>
+        <button color="warn" mat-stroked-button (click)="cadastrarAddress()">
+            Salvar
+        </button>
+    </mat-card-actions>
+</mat-card>
