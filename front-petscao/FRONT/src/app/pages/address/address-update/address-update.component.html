@@ -1,0 +1,66 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Alterar Serviço</mat-card-title>
+    </mat-card-header>
+  
+    <mat-card-content>
+      <mat-form-field class="input" id="street">
+        <mat-label>Bairro</mat-label>
+        <input
+          placeholder="Nome do serviço"
+          matInput
+          type="text"
+          [(ngModel)]="street"
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input" id="number">
+        <mat-label>Descrição do Serviço</mat-label>
+        <textarea
+          placeholder="Descrição do serviço"
+          matInput
+          type="number"
+          [(ngModel)]="number"
+        ></textarea>
+      </mat-form-field>
+  
+      <mat-form-field class="input" id="neighborhood">
+        <mat-label>Código do Serviço</mat-label>
+        <input
+          placeholder="Código do serviço"
+          matInput
+          type="text"
+          [(ngModel)]="neighborhood"
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input" id="city">
+        <mat-label>Preço do Serviço</mat-label>
+        <input
+          placeholder="Preço do serviço"
+          matInput
+          type="text"
+          [(ngModel)]="city"
+        />
+      </mat-form-field>
+      <mat-form-field class="input" id="cep">
+        <mat-label>Preço do Serviço</mat-label>
+        <input
+          placeholder="Preço do serviço"
+          matInput
+          type="number"
+          [(ngModel)]="cep"
+        />
+      </mat-form-field>
+    </mat-card-content>
+  
+    <mat-card-actions>
+      <button mat-stroked-button color="primary" (click)="voltar()">
+        Voltar
+      </button>
+      <button color="warn" mat-stroked-button (click)="alterar()">
+        Alterar
+      </button>
+    </mat-card-actions>
+  </mat-card>
+  

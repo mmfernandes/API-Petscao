@@ -18,6 +18,8 @@ export class AddressListComponent {
     "neighborhood",
     "city",
     "cep",
+    "deletar",
+    "alterar"
   ];
   
   addresses: Address[] = [];
@@ -49,5 +51,29 @@ export class AddressListComponent {
 
   openForm() {
     this.router.navigate(["pages/address/address-register"]);
+  }
+
+  deletar(addressId: number) {
+    this.client
+      .delete<Address[]>(
+        `https://localhost:5001/api/Address/delete/${addressId}`
+      )
+      .subscribe({
+        next: (address) => {
+          this.addresses = address;
+          this.snackBar.open(
+            "Fornecedor deletado com sucesso!!",
+            "PetShop",
+            {
+              duration: 1500,
+              horizontalPosition: "right",
+              verticalPosition: "top",
+            }
+          );
+        },
+        error: (erro) => {
+          console.log(erro);
+        },
+      });
   }
 }
