@@ -20,7 +20,9 @@ export class ServiceListComponent {
     "description",
     "code",
     "unitPrice",
-    "createdAt"
+    "createdAt",
+    "alterar",
+    "deletar"
   ];
   services: Service[] = [];
 
@@ -43,7 +45,7 @@ export class ServiceListComponent {
           this.services = services;
         },
         //Requisição com erro
-        error: (erro: any) => {
+        error: (erro) => {
           console.log(erro);
           this.snackBar.open('Erro ao obter dados do servidor', '', {
             duration: 3000, // 3 segundos
@@ -54,5 +56,30 @@ export class ServiceListComponent {
   }
   public openForm(){
     this.router.navigate(['pages/service/service-register'])
+  }
+
+
+  deletar(serviceId: number) {
+    this.client
+      .delete<Service[]>(
+        `https://localhost:5001/api/Service/delete/${serviceId}`
+      )
+      .subscribe({
+        next: (services) => {
+          this.services = services;
+          this.snackBar.open(
+            "Fornecedor deletado com sucesso!!",
+            "PetShop",
+            {
+              duration: 1500,
+              horizontalPosition: "right",
+              verticalPosition: "top",
+            }
+          );
+        },
+        error: (erro) => {
+          console.log(erro);
+        },
+      });
   }
 }

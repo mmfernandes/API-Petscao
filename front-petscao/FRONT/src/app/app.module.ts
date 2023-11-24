@@ -29,6 +29,7 @@ import { ServiceRegisterComponent } from "./pages/service/service-register/servi
 import { SupplierListComponent } from "./pages/supplier/supplier-list/supplier-list.component";
 import { SupplierRegisterComponent } from "./pages/supplier/supplier-register/supplier-register.component";
 import { SupplierUpdateComponent } from "./pages/supplier/supplier-update/supplier-update.component";
+import { ServiceUpdateComponent } from "./pages/service/service-update/service-update.component";
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { SupplierUpdateComponent } from "./pages/supplier/supplier-update/suppli
     AddressListComponent,
     ServiceListComponent,
     ServiceRegisterComponent,
+    ServiceUpdateComponent,
   
   ],
   imports: [
@@ -69,6 +71,7 @@ import { SupplierUpdateComponent } from "./pages/supplier/supplier-update/suppli
     MatInputModule,
     MatFormFieldModule,
     MatSnackBarModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

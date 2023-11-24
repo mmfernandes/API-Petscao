@@ -11,6 +11,8 @@ import { AnimalUpdateComponent } from "./pages/animal/animal-update/animal-updat
 import { SupplierListComponent } from "./pages/supplier/supplier-list/supplier-list.component";
 import { SupplierRegisterComponent } from "./pages/supplier/supplier-register/supplier-register.component";
 import { SupplierUpdateComponent } from "./pages/supplier/supplier-update/supplier-update.component";
+import { ServiceRegisterComponent } from "./pages/service/service-register/service-register.component";
+import { ServiceUpdateComponent } from "./pages/service/service-update/service-update.component";
 
 
 const routes: Routes = [
@@ -74,6 +76,15 @@ const routes: Routes = [
     path: "pages/supplier/supplier-update/:id",
     component: SupplierUpdateComponent,
   },
+  {
+    path: "pages/service/service-register",
+    component: ServiceRegisterComponent,
+  },
+  {
+    path: "pages/service/service-update/:id",
+    component: ServiceUpdateComponent,
+  },
+  
 ];
 
 @NgModule({
