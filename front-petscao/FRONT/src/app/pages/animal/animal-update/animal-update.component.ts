@@ -1,5 +1,5 @@
 import { HttpClient } from "@angular/common/http";
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { ActivatedRoute, Router } from "@angular/router";
 import { Animal } from "src/app/models/animal.model";
@@ -10,7 +10,7 @@ import { Customer } from "src/app/models/customer.model";
     templateUrl: "./animal-update.component.html",
     styleUrls: ["./animal-update.component.css"],
 })
-export class AnimalUpdateComponent {
+export class AnimalUpdateComponent implements OnInit{
     animalId: number = 0;
     name: string = "";
     breed: string = "";

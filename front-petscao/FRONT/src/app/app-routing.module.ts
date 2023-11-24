@@ -11,6 +11,7 @@ import { AnimalUpdateComponent } from "./pages/animal/animal-update/animal-updat
 import { SupplierListComponent } from "./pages/supplier/supplier-list/supplier-list.component";
 import { SupplierRegisterComponent } from "./pages/supplier/supplier-register/supplier-register.component";
 import { SupplierUpdateComponent } from "./pages/supplier/supplier-update/supplier-update.component";
+import { CustomerUpdateComponent } from "./pages/customer/customer-update/customer-update.component";
 
 
 const routes: Routes = [
@@ -41,6 +42,11 @@ const routes: Routes = [
   {
     path: "pages/customer/customer-list",
     component: CustomerListComponent,
+  },
+  {
+    path: "pages/customer/customer-update/:id",
+    component: CustomerUpdateComponent
+    ,
   },
   {
     path: "pages/service/service-list",

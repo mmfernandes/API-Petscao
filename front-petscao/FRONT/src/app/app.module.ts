@@ -29,6 +29,7 @@ import { ServiceRegisterComponent } from "./pages/service/service-register/servi
 import { SupplierListComponent } from "./pages/supplier/supplier-list/supplier-list.component";
 import { SupplierRegisterComponent } from "./pages/supplier/supplier-register/supplier-register.component";
 import { SupplierUpdateComponent } from "./pages/supplier/supplier-update/supplier-update.component";
+import { CustomerUpdateComponent } from "./pages/customer/customer-update/customer-update.component";
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { SupplierUpdateComponent } from "./pages/supplier/supplier-update/suppli
 
     CustomerRegisterComponent,
     CustomerListComponent,
+    CustomerUpdateComponent,
 
     SupplierListComponent,
     SupplierRegisterComponent,
@@ -47,6 +49,7 @@ import { SupplierUpdateComponent } from "./pages/supplier/supplier-update/suppli
 
     AddressRegisterComponent,
     AddressListComponent,
+    
     ServiceListComponent,
     ServiceRegisterComponent,
   

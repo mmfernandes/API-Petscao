@@ -2,10 +2,10 @@ POST https://localhost:5001/api/Customer/post
 Content-Type: application/json
 
 {
-    "Name": "Bruno",
-    "CPF": "0025478964",
+    "Name": "Yuga Lasi",
+    "CPF": "7812652162",
     "Phone": "41852369741",
-    "Email": "bruno@teste.com",
+    "Email": "aaa@teste.com",
     "AddressId": 7
 }
 
@@ -14,7 +14,7 @@ GET https://localhost:5001/api/Customer/getAll
 
 
 ### search by ID or NAME, but it's not searching
-GET https://localhost:5001/api/Customer/getByName/Bruno
+GET https://localhost:5001/api/Customer/getById/5
 
 ### update an existing Customer by ID 
 PUT https://localhost:5001/api/Customer/put/1

@@ -2,9 +2,9 @@ POST https://localhost:5001/api/Animal/post
 Content-Type: application/json
 
 {
-    "Name": "Gatinha Noturna",
-    "Breed": "Black Cat",
-    "CustomerId": 3
+    "Name": "Roberta",
+    "Breed": "Pantera",
+    "CustomerId": 17
 }
 
 ### get all addresses 
@@ -15,13 +15,13 @@ GET https://localhost:5001/api/Animal/getAll
 GET https://localhost:5001/api/Animal/getById/4
 
 ### update an existing address by ID 
-PUT https://localhost:5001/api/Animal/put/1
+PUT https://localhost:5001/api/Animal/put/25
 Content-Type: application/json
 
 {
-    "Name": "Animal 1'",
+    "Name": "nome'",
     "Breed": "raça",
-    "CustomerId": 1
+    "CustomerId": 15
 }
 
 

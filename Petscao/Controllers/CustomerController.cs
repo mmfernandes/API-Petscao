@@ -43,22 +43,22 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("getByName/{name}")]
-        public IActionResult GetByName([FromRoute] string name)
+        [Route("getById/{id}")]
+        public IActionResult GetById([FromRoute] int id)
         {
             try
             {
                 Customer customer =
                     _ctx.Customers
                     .Include(x => x.Address)
-                    .FirstOrDefault(x => x.Name == name);
+                   .FirstOrDefault(x => x.CustomerId == id);
 
                 if (customer != null)
                 {
                     return Ok(customer);
                 }
 
-                return NotFound($"Cliente com o nome '{name}' não encontrado.");
+                return NotFound($"Cliente com o id '{id}' não encontrado.");
             }
             catch (Exception e)
             {

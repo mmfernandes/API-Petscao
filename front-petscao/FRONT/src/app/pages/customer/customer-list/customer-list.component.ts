@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Customer } from 'src/app/models/customer.model';
 import { HttpClient } from "@angular/common/http";
 import { Component } from "@angular/core";
@@ -17,13 +18,18 @@ export class CustomerListComponent {
     "id",
     "name",
     "cpf",
-    "createdAt" 
+    "phone",
+    "email",
+    "createdAt" ,
+    "alterar",
+    "deletar"
   ];
   customers: Customer[] = []; 
 
   constructor(
     private client: HttpClient,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private router: Router
   ) {
     //Um problema de CORS ao fazer uma requisição para a nossa API
   }
@@ -45,5 +51,34 @@ export class CustomerListComponent {
           
         },
       });
+  }
+
+  deletarCustomer(customerId: number) {
+    this.client
+      .delete<Customer[]>(
+        `https://localhost:5001/api/Customer/delete/${customerId}`
+      )
+      .subscribe({
+        next: (customerId) => {
+          this.customers = customerId;
+          this.snackBar.open(
+            "Cliente deletado com sucesso!!",
+            "PetShop",
+            {
+              duration: 1500,
+              horizontalPosition: "right",
+              verticalPosition: "top",
+            }
+          );
+          this.router.navigate(["pages/customer/customer-list"])
+        },
+        error: (erro) => {
+          console.log(erro);
+        },
+      });
+  }
+  
+  public openPost(){
+    this.router.navigate(['pages/customer/customer-register'])
   }
 }//end component
