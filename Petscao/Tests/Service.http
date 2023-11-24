@@ -13,7 +13,7 @@ Content-Type: application/json
 GET https://localhost:5001/api/Service/getAll
 
 ###search by name
-GET https://localhost:5001/api/Service/getByName/Banho
+GET https://localhost:5001/api/Service/getById/2
 
 ### update an existing service by ID 
 PUT https://localhost:5001/api/Service/put/3

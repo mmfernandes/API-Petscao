@@ -29,7 +29,11 @@ import { ServiceRegisterComponent } from "./pages/service/service-register/servi
 import { SupplierListComponent } from "./pages/supplier/supplier-list/supplier-list.component";
 import { SupplierRegisterComponent } from "./pages/supplier/supplier-register/supplier-register.component";
 import { SupplierUpdateComponent } from "./pages/supplier/supplier-update/supplier-update.component";
+<<<<<<< HEAD
 import { CustomerUpdateComponent } from "./pages/customer/customer-update/customer-update.component";
+=======
+import { ServiceUpdateComponent } from "./pages/service/service-update/service-update.component";
+>>>>>>> ea7d5258ed662a0457b9bd57eb1c8e36444a8e76
 
 @NgModule({
   declarations: [
@@ -52,6 +56,7 @@ import { CustomerUpdateComponent } from "./pages/customer/customer-update/custom
     
     ServiceListComponent,
     ServiceRegisterComponent,
+    ServiceUpdateComponent,
   
   ],
   imports: [
@@ -72,6 +77,7 @@ import { CustomerUpdateComponent } from "./pages/customer/customer-update/custom
     MatInputModule,
     MatFormFieldModule,
     MatSnackBarModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

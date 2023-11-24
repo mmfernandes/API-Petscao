@@ -39,19 +39,19 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("getByName/{name}")]
-        public IActionResult GetByName([FromRoute] string name)
+        [Route("getById/{id}")]
+        public IActionResult GetById([FromRoute] int id)
         {
             try
             {
-                Service services = _ctx.Services.FirstOrDefault(x => x.Name == name);
+                Service services = _ctx.Services.FirstOrDefault(x => x.ServiceId == id);
 
                 if (services != null)
                 {
                     return Ok(services);
                 }
 
-                return NotFound($"Serviço com o nome '{name}' não encontrado.");
+                return NotFound($"Serviço com o nome '{id}' não encontrado.");
             }
             catch (Exception e)
             {

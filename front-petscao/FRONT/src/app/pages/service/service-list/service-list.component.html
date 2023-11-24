@@ -1,6 +1,6 @@
 <div>
   <header>
-    <span class="title">services</span>
+    <span class="title">Serviços</span>
     <button type="button" mat-raised-button color="primary" (click)="openForm()">Adicionar</button>
   </header>
   <table
@@ -17,60 +17,61 @@
     </ng-container>
     
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <th mat-header-cell *matHeaderCellDef>Nome</th>
       <td mat-cell *matCellDef="let service">{{ service.name }}</td>
     </ng-container>
 
     <ng-container matColumnDef="description">
-      <th mat-header-cell *matHeaderCellDef>description</th>
+      <th mat-header-cell *matHeaderCellDef>Descrição do serviço</th>
       <td mat-cell *matCellDef="let service">
         {{ service.description }} </td>
       </ng-container>
 
       <ng-container matColumnDef="code">
-        <th mat-header-cell *matHeaderCellDef>code</th>
+        <th mat-header-cell *matHeaderCellDef>Código</th>
         <td mat-cell *matCellDef="let service">
           {{ service.code }} </td>
         </ng-container>
 
         <ng-container matColumnDef="unitPrice">
-          <th mat-header-cell *matHeaderCellDef>unirPrice</th>
+          <th mat-header-cell *matHeaderCellDef>Preço</th>
           <td mat-cell *matCellDef="let service">
             {{ service.unitPrice }} </td>
           </ng-container>
 
           <ng-container matColumnDef="createdAt">
-            <th mat-header-cell *matHeaderCellDef>createdAt</th>
+            <th mat-header-cell *matHeaderCellDef>Criado em</th>
             <td mat-cell *matCellDef="let service">
               {{ service.createdAt }} </td>
             </ng-container>
-
-      <!-- <ng-container matColumnDef="alterar">
-        <th mat-header-cell *matHeaderCellDef>Alterar</th>
-        <td mat-cell *matCellDef="let service">
-          <a
-            color="accent"
-            mat-stroked-button
-            routerLink="/pages/service/service-update/{{
-              service.serviceId
-            }}"
-          >
-            Alterar
-          </a>
-        </td>
-      </ng-container>
-
-      <ng-container matColumnDef="deletar">
-        <th mat-header-cell *matHeaderCellDef>Deletar</th>
-        <td mat-cell *matCellDef="let service">
-          <button
-            color="warn"
-            mat-stroked-button
-          >
-            Deletar
-          </button>
-        </td>
-      </ng-container> -->
+            <ng-container matColumnDef="alterar">
+              <th mat-header-cell *matHeaderCellDef>Alterar</th>
+              <td mat-cell *matCellDef="let service">
+                <a
+                  color="accent"
+                  mat-stroked-button
+                  routerLink="/pages/service/service-update/{{
+                    service.serviceId
+                  }}"
+                >
+                  Alterar
+                </a>
+              </td>
+            </ng-container>
+      
+            <ng-container matColumnDef="deletar">
+              <th mat-header-cell *matHeaderCellDef>Deletar</th>
+              <td mat-cell *matCellDef="let service">
+                <a
+                  color="warn"
+                  mat-stroked-button
+                  (click)="deletar(service.serviceId)"
+                >
+                  Deletar
+              </a>
+              </td>
+            </ng-container>
+       
 
     <tr mat-header-row *matHeaderRowDef="columnsTable"></tr>
     <tr mat-row *matRowDef="let row; columns: columnsTable"></tr> 
