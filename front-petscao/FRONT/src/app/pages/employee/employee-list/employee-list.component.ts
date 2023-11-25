@@ -21,6 +21,7 @@ export class EmployeeListComponent {
     "Name",
     "cpf",
     "phone",
+    "address",
     "email",
     "createdAt" ,
     "alterar",

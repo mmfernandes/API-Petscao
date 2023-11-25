@@ -11,14 +11,15 @@ import { Employee } from "src/app/models/employee.model";
   styleUrls: ['./employee-update.component.css']
 })
 export class EmployeeUpdateComponent {
-  employeeId: number = 0;
+  EmployeeId?: number;
   name: string = "";
   cpf: string = "";
   phone: string = "";
   email: string = "";
-  addressId: number = 0;
-  address?: Address;
-  addresses: Address[] = [];
+  AddressId: number = 0;
+  Address?: Address;
+  adresses: Address[] = [];
+  
 
   constructor(
     private client: HttpClient,
@@ -39,15 +40,14 @@ export class EmployeeUpdateComponent {
                 .get<Address[]>("https://localhost:5001/api/Address/getAll")
                 .subscribe({
                   next: (addresses) => {
-                    this.addresses = addresses;
-
-                    // Atribuição com valor padrão
-                    this.employeeId = employee.EmployeeId ?? 0;
+                    this.adresses = addresses;
+                    
+                    this.EmployeeId = employee.EmployeeId!
                     this.name = employee.Name;
                     this.cpf = employee.CPF;
                     this.phone = employee.Phone;
                     this.email = employee.Email;
-                    this.addressId = employee.AddressId ?? 0;
+                    this.AddressId = employee.AddressId;
                   },
                   error: (erro) => {
                     console.log(erro);
@@ -68,13 +68,12 @@ export class EmployeeUpdateComponent {
       CPF: this.cpf,
       Phone: this.phone,
       Email: this.email,
-      AddressId: this.addressId,
-      EmployeeId: 0,
+      AddressId: this.AddressId,
     };
 
     this.client
       .put<Employee>(
-        `https://localhost:5001/api/employee/put/${this.employeeId}`,
+        `https://localhost:5001/api/employee/put/${this.EmployeeId}`,
         employee
       )
       .subscribe({
