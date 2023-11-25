@@ -31,6 +31,9 @@ import { SupplierRegisterComponent } from "./pages/supplier/supplier-register/su
 import { SupplierUpdateComponent } from "./pages/supplier/supplier-update/supplier-update.component";
 import { CustomerUpdateComponent } from "./pages/customer/customer-update/customer-update.component";
 import { ServiceUpdateComponent } from "./pages/service/service-update/service-update.component";
+import { EmployeeListComponent } from "./pages/employee/employee-list/employee-list.component";
+import { EmployeeRegisterComponent } from "./pages/employee/employee-register/employee-register.component";
+import { EmployeeUpdateComponent } from "./pages/employee/employee-update/employee-update.component";
 
 @NgModule({
   declarations: [
@@ -54,6 +57,10 @@ import { ServiceUpdateComponent } from "./pages/service/service-update/service-u
     ServiceListComponent,
     ServiceRegisterComponent,
     ServiceUpdateComponent,
+
+    EmployeeListComponent,
+    EmployeeRegisterComponent,
+    EmployeeUpdateComponent
   
   ],
   imports: [

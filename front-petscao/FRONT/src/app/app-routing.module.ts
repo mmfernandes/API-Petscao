@@ -14,6 +14,9 @@ import { SupplierUpdateComponent } from "./pages/supplier/supplier-update/suppli
 import { CustomerUpdateComponent } from "./pages/customer/customer-update/customer-update.component";
 import { ServiceRegisterComponent } from "./pages/service/service-register/service-register.component";
 import { ServiceUpdateComponent } from "./pages/service/service-update/service-update.component";
+import { EmployeeListComponent } from "./pages/employee/employee-list/employee-list.component";
+import { EmployeeRegisterComponent } from "./pages/employee/employee-register/employee-register.component";
+import { EmployeeUpdateComponent } from "./pages/employee/employee-update/employee-update.component";
 
 
 const routes: Routes = [
@@ -89,6 +92,18 @@ const routes: Routes = [
   {
     path: "pages/service/service-update/:id",
     component: ServiceUpdateComponent,
+  },
+  {
+    path: "pages/employee/employee-list",
+    component: EmployeeListComponent,
+  },
+  {
+    path: "pages/employee/employee-register",
+    component: EmployeeRegisterComponent,
+  },
+  {
+    path: "pages/employee/employee-update",
+    component: EmployeeUpdateComponent,
   },
   
 ];
