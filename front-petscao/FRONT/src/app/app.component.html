@@ -39,17 +39,9 @@
       </a>
       <br>
       <a> <!--TIMELINE-->
-        <button mat-button [matMenuTriggerFor]="customerMenu">
-          <mat-icon class="icon">calendar_month</mat-icon> Timeline
+        <button mat-button routerLink="/pages/timeline/timeline-list">
+          <mat-icon class="icon">calender</mat-icon> Timeline
         </button>
-        <mat-menu #customerMenu="matMenu" yPosition="below">
-          <button mat-menu-item routerLink="/pages/customer/customer-list">
-            <mat-icon class="icon">lists</mat-icon> List Timeline
-          </button>
-          <button mat-menu-item routerLink="/pages/customer/customer-register">
-            <mat-icon class="icon">add_circle</mat-icon> Register Timeline
-          </button>
-        </mat-menu>
       </a>
       <br>
       <a> <!--SERVICE-->

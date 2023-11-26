@@ -17,6 +17,7 @@ import { ServiceUpdateComponent } from "./pages/service/service-update/service-u
 import { EmployeeListComponent } from "./pages/employee/employee-list/employee-list.component";
 import { EmployeeRegisterComponent } from "./pages/employee/employee-register/employee-register.component";
 import { EmployeeUpdateComponent } from "./pages/employee/employee-update/employee-update.component";
+import { TimelineListComponent } from "./pages/timeline/timeline-list/timeline-list.component";
 
 
 const routes: Routes = [
@@ -105,6 +106,11 @@ const routes: Routes = [
     path: "pages/employee/employee-update/:id",
     component: EmployeeUpdateComponent,
   },
+  {
+    path: "pages/timeline/timeline-list",
+    component: TimelineListComponent,
+  },
+
   
 ];
 

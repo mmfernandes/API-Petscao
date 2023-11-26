@@ -34,6 +34,7 @@ import { ServiceUpdateComponent } from "./pages/service/service-update/service-u
 import { EmployeeListComponent } from "./pages/employee/employee-list/employee-list.component";
 import { EmployeeRegisterComponent } from "./pages/employee/employee-register/employee-register.component";
 import { EmployeeUpdateComponent } from "./pages/employee/employee-update/employee-update.component";
+import { TimelineListComponent } from "./pages/timeline/timeline-list/timeline-list.component";
 
 @NgModule({
   declarations: [
@@ -60,7 +61,9 @@ import { EmployeeUpdateComponent } from "./pages/employee/employee-update/employ
 
     EmployeeListComponent,
     EmployeeRegisterComponent,
-    EmployeeUpdateComponent
+    EmployeeUpdateComponent,
+
+    TimelineListComponent,
   
   ],
   imports: [
