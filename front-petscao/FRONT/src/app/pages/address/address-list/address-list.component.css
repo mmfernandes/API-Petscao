@@ -1,27 +1,24 @@
 table {
-  width: 100%;
-  margin-left: 10px;
-  margin-right: 10px;
-}
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+    
+  td, th {
+    text-align: center;
+  }
   
-td, th {
-  text-align: center;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  margin-right: 10px;
-}
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+    
+  title {
+    
+  }
   
-.title {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-button {
-  margin-bottom: 10px;
-}
+  button {
+    margin-bottom: 10px;
+  }

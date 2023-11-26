@@ -4,27 +4,14 @@
     <mat-card-subtitle>&nbsp;</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-
     <mat-form-field class="input" id="name">
       <mat-label>Nome</mat-label>
       <input placeholder="Nome do Customer" matInput type="text" [(ngModel)]="name" />
     </mat-form-field>
-    <!-- // -->
     <mat-form-field class="input" id="cpf">
       <mat-label>CPF</mat-label>
       <input placeholder="Ex. 151.726.599-00" matInput type="text" [(ngModel)]="cpf" />
     </mat-form-field>
-    <!-- // -->
-    <mat-form-field class="input" id="phone">
-      <mat-label>Phone </mat-label>
-      <input placeholder="Ex. 41 998186982" matInput type="text" [(ngModel)]="phone" />
-    </mat-form-field>
-    <!-- // -->
-    <mat-form-field class="input" id="email">
-      <mat-label>Email </mat-label>
-      <input placeholder="Ex. mayara@sanidade.com" matInput type="text" [(ngModel)]="email" />
-    </mat-form-field>
-    <!-- // -->
     <mat-form-field class="input" id="address">
       <mat-label>CEP</mat-label>
       <mat-select [(ngModel)]="addressId">
@@ -38,3 +25,4 @@
     <button color="warn" mat-stroked-button (click)="cadastrarCustomer()">Cadastrar</button>
   </mat-card-actions>
 </mat-card>
+

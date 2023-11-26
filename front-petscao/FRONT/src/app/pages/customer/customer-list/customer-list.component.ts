@@ -54,8 +54,6 @@ export class CustomerListComponent {
   }
 
   deletarCustomer(customerId: number) {
-    const confirmDelete = window.confirm('Tem certeza de que deseja excluir este cliente?');
-    if(confirmDelete){
     this.client
       .delete<Customer[]>(
         `https://localhost:5001/api/Customer/delete/${customerId}`
@@ -79,7 +77,6 @@ export class CustomerListComponent {
         },
       });
   }
-}
   
   public openPost(){
     this.router.navigate(['pages/customer/customer-register'])

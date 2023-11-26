@@ -27,38 +27,34 @@ export class AddressUpdateComponent {
     private snackBar: MatSnackBar,
     private route: ActivatedRoute
   ) {}
-  
+
   ngOnInit(): void {
-    this.route.params.subscribe({
-      next: (parametros) => {
-        let { id } = parametros;
-        this.client
-          .get<Address>(`https://localhost:5001/api/Address/getById/${id}`)
-          .subscribe({
-            next: (ad) => {
-              this.client
-                .get<Address[]>("https://localhost:5001/api/Address/getAll")
-                .subscribe({
-                  next: (address) => {
-                    this.address = address; // corrigir para o nome correto da propriedade
-                    
-                    this.addressId = ad.addressId!;
-                    this.street = ad.street;
-                    this.number = ad.number;
-                    this.neighborhood = ad.neighborhood;
-                    this.city = ad.city;
-                    this.cep = ad.cep;
-                  },
-                  error: (erro) => {
-                    console.log(erro);
-                  },
-                });
-            },
-            error: (erro) => {
-              console.log(erro);
-            },
-          });
-      },
+    this.route.params.subscribe(params => {
+      const { id } = params;
+      this.client.get<Address>(`https://localhost:5001/api/Address/getById/${id}`)
+        .subscribe({
+          next: (address) => {
+            this.addressId = address.addressId!;
+            this.street = address.street;
+            this.number = address.number;
+            this.neighborhood = address.neighborhood;
+            this.city = address.city;
+            this.cep = address.cep;
+          },
+          error: (error) => {
+            console.error(error);
+          }
+        });
+
+      this.client.get<Address[]>("https://localhost:5001/api/Address/getAll")
+        .subscribe({
+          next: (address) => {
+            this.address = address;
+          },
+          error: (error) => {
+            console.error(error);
+          }
+        });
     });
   }
 

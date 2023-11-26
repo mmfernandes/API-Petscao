@@ -16,14 +16,14 @@
       <mat-label>Phone</mat-label>
       <input placeholder="Ex. 41 923456543" matInput type="text" [(ngModel)]="phone" />
     </mat-form-field>
-    <mat-form-field class="input" id="email">
+    <mat-form-field class="input" id="Email">
       <mat-label>Email</mat-label>
       <input placeholder="Ex.exemplo@gmail.com" matInput type="text" [(ngModel)]="email" />
     </mat-form-field>
 
     <mat-form-field class="input" id="address">
       <mat-label>Endereço</mat-label>
-      <mat-select [(ngModel)]="AddressId">
+      <mat-select [(ngModel)]="addressId">
         <mat-option
           *ngFor="let a of adresses"
           [value]="a.addressId"

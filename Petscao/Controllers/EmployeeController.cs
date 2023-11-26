@@ -43,21 +43,21 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("getByString/{name}")]
-        public IActionResult GetByName([FromRoute] string name)
+        [Route("getById/{id}")]
+        public IActionResult GetByName([FromRoute] int id)
         {
             try
             {
                 Employee employee = _ctx.Employees
                     .Include(x => x.Address)
-                    .FirstOrDefault(x => x.Name == name);
+                    .FirstOrDefault(x => x.EmployeeId == id);
 
                 if (employee != null)
                 {
                     return Ok(employee);
                 }
 
-                return NotFound($"Funcionário com o nome '{name}' não encontrado.");
+                return NotFound($"Funcionário com o nome '{id}' não encontrado.");
             }
             catch (Exception e)
             {

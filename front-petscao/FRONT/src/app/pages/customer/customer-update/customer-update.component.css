@@ -1,13 +1,13 @@
 .input {
-  width: 50%;
-  display: block;
-}
-
-mat-card-title {
-  margin-bottom: 10px;
-}
-
-mat-card-actions {
-  display: flex;
-  justify-content: space-between;
-}
+    width: 100%;
+    display: block;
+  }
+  
+  mat-card-title {
+    margin-bottom: 10px;
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+  }

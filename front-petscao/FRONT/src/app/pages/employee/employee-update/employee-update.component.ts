@@ -11,13 +11,13 @@ import { Employee } from "src/app/models/employee.model";
   styleUrls: ['./employee-update.component.css']
 })
 export class EmployeeUpdateComponent {
-  EmployeeId?: number;
+  employeeId?: number;
   name: string = "";
   cpf: string = "";
   phone: string = "";
   email: string = "";
-  AddressId: number = 0;
-  Address?: Address;
+  addressId: number = 0;
+  // Address?: Address;
   adresses: Address[] = [];
   
 
@@ -33,7 +33,7 @@ export class EmployeeUpdateComponent {
       next: (parametros) => {
         let { id } = parametros;
         this.client
-          .get<Employee>(`https://localhost:5001/api/employee/getById/${id}`)
+          .get<Employee>(`https://localhost:5001/api/Employee/getById/${id}`)
           .subscribe({
             next: (employee) => {
               this.client
@@ -42,12 +42,12 @@ export class EmployeeUpdateComponent {
                   next: (addresses) => {
                     this.adresses = addresses;
                     
-                    this.EmployeeId = employee.EmployeeId!
-                    this.name = employee.Name;
-                    this.cpf = employee.CPF;
-                    this.phone = employee.Phone;
-                    this.email = employee.Email;
-                    this.AddressId = employee.AddressId;
+                    this.employeeId = employee.employeeId!
+                    this.name = employee.name;
+                    this.cpf = employee.cpf;
+                    this.phone = employee.phone;
+                    this.email = employee.email;
+                    this.addressId = employee.addressId;
                   },
                   error: (erro) => {
                     console.log(erro);
@@ -64,16 +64,16 @@ export class EmployeeUpdateComponent {
 
   alterar(): void {
     let employee: Employee = {
-      Name: this.name,
-      CPF: this.cpf,
-      Phone: this.phone,
-      Email: this.email,
-      AddressId: this.AddressId,
+      name: this.name,
+      cpf: this.cpf,
+      phone: this.phone,
+      email: this.email,
+      addressId: this.addressId,
     };
 
     this.client
       .put<Employee>(
-        `https://localhost:5001/api/employee/put/${this.EmployeeId}`,
+        `https://localhost:5001/api/Employee/put/${this.employeeId}`,
         employee
       )
       .subscribe({

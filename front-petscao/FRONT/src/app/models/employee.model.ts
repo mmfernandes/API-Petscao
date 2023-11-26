@@ -1,13 +1,13 @@
 import { Address } from './address.model';
 
 export interface Employee {
-    EmployeeId?: number
-    Name: string
-    CPF: string
-    Phone: string
-    Email: string
-    Address?: Address
-    AddressId: number
+    employeeId?: number
+    name: string
+    cpf: string
+    phone: string
+    email: string
+    address?: Address
+    addressId: number
     createdAt?: string; 
 
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mayfe\\OneDrive\\Documentos\\Backup\\API-Petscao\\Petscao\\Petscao.csproj": {}
+    "D:\\API-Petscao\\Petscao\\Petscao.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mayfe\\OneDrive\\Documentos\\Backup\\API-Petscao\\Petscao\\Petscao.csproj": {
+    "D:\\API-Petscao\\Petscao\\Petscao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mayfe\\OneDrive\\Documentos\\Backup\\API-Petscao\\Petscao\\Petscao.csproj",
+        "projectUniqueName": "D:\\API-Petscao\\Petscao\\Petscao.csproj",
         "projectName": "Petscao",
-        "projectPath": "C:\\Users\\mayfe\\OneDrive\\Documentos\\Backup\\API-Petscao\\Petscao\\Petscao.csproj",
-        "packagesPath": "C:\\Users\\mayfe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mayfe\\OneDrive\\Documentos\\Backup\\API-Petscao\\Petscao\\obj\\",
+        "projectPath": "D:\\API-Petscao\\Petscao\\Petscao.csproj",
+        "packagesPath": "C:\\Users\\maryeli.obici\\.nuget\\packages\\",
+        "outputPath": "D:\\API-Petscao\\Petscao\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mayfe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\maryeli.obici\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -76,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.416\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
         }
       }
     }

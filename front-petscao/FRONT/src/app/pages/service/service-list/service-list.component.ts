@@ -60,8 +60,6 @@ export class ServiceListComponent {
 
 
   deletar(serviceId: number) {
-    const confirmDelete = window.confirm('Tem certeza de que deseja excluir este SERVIÇO?');
-    if(confirmDelete){
     this.client
       .delete<Service[]>(
         `https://localhost:5001/api/Service/delete/${serviceId}`
@@ -83,6 +81,5 @@ export class ServiceListComponent {
           console.log(erro);
         },
       });
-   }
   }
 }

@@ -44,12 +44,12 @@ export class EmployeeRegisterComponent {
   }
   cadastrarEmployee(): void {
     let employee: Employee = {
-      Name: this.name,
-      CPF: this.cpf,
-      Phone: this.phone,
-      Email: this.email,
-      AddressId: this.addressId,
-      EmployeeId: 0,
+      name: this.name,
+      cpf: this.cpf,
+      phone: this.phone,
+      email: this.email,
+      addressId: this.addressId,
+      employeeId: 0,
     };
 
     this.client

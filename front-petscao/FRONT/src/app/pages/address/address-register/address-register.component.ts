@@ -49,7 +49,7 @@ export class AddressRegisterComponent {
               verticalPosition: "top",
             }
           );
-          this.router.navigate(["pages/address/address-list"]);
+          this.router.navigate(["pages/customer/customer-list"]);
         },
         //A requição não funcionou
         error: (erro) => {
