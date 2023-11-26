@@ -54,15 +54,18 @@ export class AddressListComponent {
   }
 
   deletar(addressId: number) {
-    this.client
-      .delete<Address[]>(
+    const confirmDelete = window.confirm('Tem certeza de que deseja excluir este endereço?');
+    if(confirmDelete)
+    {
+      this.client
+       .delete<Address[]>(
         `https://localhost:5001/api/Address/delete/${addressId}`
       )
       .subscribe({
         next: (address) => {
           this.addresses = address;
           this.snackBar.open(
-            "Fornecedor deletado com sucesso!!",
+            "Endereço deletado com sucesso!!",
             "PetShop",
             {
               duration: 1500,
@@ -74,6 +77,8 @@ export class AddressListComponent {
         error: (erro) => {
           console.log(erro);
         },
-      });
+       });
+       this.router.navigate(["pages/address/address-list"]);
+    }
   }
 }

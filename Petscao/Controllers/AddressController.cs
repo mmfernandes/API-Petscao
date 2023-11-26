@@ -37,17 +37,17 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("getByStreet/{street}")]
-        public IActionResult GetByStreet([FromRoute] string street)
+        [Route("getById/{id}")]
+        public IActionResult GetByStreet([FromRoute] int id)
         {
             try
             {
-                Address? address = _ctx.Adresses.FirstOrDefault(x => x.Street == street);
+                Address? address = _ctx.Adresses.FirstOrDefault(x => x.AddressId == id);
                 if (address != null)
                 {
                     return Ok(address);
                 }
-                return NotFound($"Endereço com a rua '{street}' não encontrado.");
+                return NotFound($"Endereço com a rua '{id}' não encontrado.");
             }
             catch (Exception e)
             {

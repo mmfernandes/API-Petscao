@@ -15,7 +15,7 @@ GET https://localhost:5001/api/Address/getAll
 
 
 ### search by ID or NAME, but it's not searching
-GET https://localhost:5001/api/Address/getByStreet/Equador
+GET https://localhost:5001/api/Address/getById/19
 
 ### update an existing address by ID 
 PUT https://localhost:5001/api/Address/put/5

@@ -51,6 +51,8 @@ export class SupplierListComponent {
   }
 
   deletar(supplierId: number) {
+    const confirmDelete = window.confirm('Tem certeza de que deseja excluir este FORNECEDOR?');
+    if(confirmDelete){
     this.client
       .delete<Supplier[]>(
         `https://localhost:5001/api/Supplier/delete/${supplierId}`
@@ -67,10 +69,12 @@ export class SupplierListComponent {
               verticalPosition: "top",
             }
           );
+          this.router.navigate(['pages/supplier/supplier-list']);
         },
         error: (erro) => {
           console.log(erro);
         },
       });
+    }
   }
 }

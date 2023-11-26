@@ -36,7 +36,7 @@ export class AnimalListComponent {
         },
         error: (erro) => {
           console.log(erro);
-          this.snackBar.open('Erro ao obter dados do servidor', '', {
+          this.snackBar.open('Erro ao obter dados do servidor ', '', {
             duration: 3000,
           });
           
@@ -49,6 +49,8 @@ export class AnimalListComponent {
   }
 
   deletar(animalId: number) {
+    const confirmDelete = window.confirm('Tem certeza de que deseja excluir este animal?');
+    if(confirmDelete){
     this.client
       .delete<Animal[]>(
         `https://localhost:5001/api/Animal/delete/${animalId}`
@@ -70,5 +72,6 @@ export class AnimalListComponent {
           console.log(erro);
         },
       });
+   }
   }
 }

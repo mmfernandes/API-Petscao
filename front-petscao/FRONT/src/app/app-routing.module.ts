@@ -17,6 +17,7 @@ import { ServiceUpdateComponent } from "./pages/service/service-update/service-u
 import { EmployeeListComponent } from "./pages/employee/employee-list/employee-list.component";
 import { EmployeeRegisterComponent } from "./pages/employee/employee-register/employee-register.component";
 import { EmployeeUpdateComponent } from "./pages/employee/employee-update/employee-update.component";
+import { AddressUpdateComponent } from "./pages/address/address-update/address-update.component";
 
 
 const routes: Routes = [
@@ -61,6 +62,11 @@ const routes: Routes = [
     path: "pages/address/address-register",
     component: AddressRegisterComponent,
   },
+  {
+    path: "pages/address/address-update/:id",
+    component: AddressUpdateComponent,
+  },
+  
   {
     path: "",
     component: AddressListComponent,

@@ -8,17 +8,9 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Petscao
 build_property.RootNamespace = Petscao
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\maryeli.obici\Desktop\API-Petscao\Petscao\
+build_property.ProjectDir = C:\Users\mayfe\OneDrive\Documentos\Backup\API-Petscao\Petscao\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\maryeli.obici\Desktop\API-Petscao\Petscao
-=======
-build_property.ProjectDir = C:\GIT\API-Petscao\Petscao\
-build_property.RazorLangVersion = 6.0
-build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\GIT\API-Petscao\Petscao
->>>>>>> 5732cda566e58bdc5f6a90e74e5605ad0887e94a
+build_property.MSBuildProjectDirectory = C:\Users\mayfe\OneDrive\Documentos\Backup\API-Petscao\Petscao
 build_property._RazorSourceGeneratorDebug = 

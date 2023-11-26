@@ -2,9 +2,9 @@ POST https://localhost:5001/api/Animal/post
 Content-Type: application/json
 
 {
-    "Name": "Roberta",
-    "Breed": "Pantera",
-    "CustomerId": 17
+    "Name": "Thor",
+    "Breed": "York",
+    "CustomerId": 21
 }
 
 ### get all addresses 

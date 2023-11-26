@@ -2,11 +2,11 @@ POST https://localhost:5001/api/Customer/post
 Content-Type: application/json
 
 {
-    "Name": "Yuga Lasi",
-    "CPF": "7812652162",
-    "Phone": "41852369741",
-    "Email": "aaa@teste.com",
-    "AddressId": 7
+    "Name": "Roberta Barbosa",
+    "CPF": "123.456.789-00",
+    "Phone": "41 8888-8888",
+    "Email": "bbb@teste.com",
+    "AddressId": 19
 }
 
 ### get all Customer 
