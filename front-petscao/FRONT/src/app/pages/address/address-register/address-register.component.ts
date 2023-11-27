@@ -49,7 +49,7 @@ export class AddressRegisterComponent {
               verticalPosition: "top",
             }
           );
-          this.router.navigate(["pages/customer/customer-list"]);
+          this.router.navigate(["pages/address/address-list"]);
         },
         //A requição não funcionou
         error: (erro) => {
@@ -59,7 +59,7 @@ export class AddressRegisterComponent {
    
   }
   public voltar(){
-    this.router.navigate(['pages/animal/animal-list'])
+    this.router.navigate(['pages/animal/address-list'])
   }
 
 }//fimcomponent

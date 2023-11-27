@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Address } from 'src/app/models/address.model';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -8,17 +7,17 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-address-update',
   templateUrl: './address-update.component.html',
-  styleUrl: './address-update.component.css'
+  styleUrls: ['./address-update.component.css']
 })
-export class AddressUpdateComponent {
+export class AddressUpdateComponent implements OnInit {
 
   addressId?: number = 0;
   street: string = "";
   number: number = 0;
-  neighborhood: string = ""; 
+  neighborhood: string = "";
   city: string = "";
-  cep: string = ""; 
-  createdAt?: string; 
+  cep: string = "";
+  createdAt?: string;
   address: Address[] = [];
 
   constructor(
@@ -26,7 +25,15 @@ export class AddressUpdateComponent {
     private router: Router,
     private snackBar: MatSnackBar,
     private route: ActivatedRoute
-  ) {}
+  ) {
+    // Inicializando as propriedades aqui
+    this.addressId = 0;
+    this.street = "";
+    this.number = 0;
+    this.neighborhood = "";
+    this.city = "";
+    this.cep = "";
+  }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {

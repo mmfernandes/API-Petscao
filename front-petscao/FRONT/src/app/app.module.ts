@@ -37,6 +37,7 @@ import { EmployeeUpdateComponent } from "./pages/employee/employee-update/employ
 import { TimelineListComponent } from "./pages/timeline/timeline-list/timeline-list.component";
 import { TimelineRegisterComponent } from "./pages/timeline/timeline-register/timeline-register.component";
 import { TimelineUpdateComponent } from "./pages/timeline/timeline-update/timeline-update.component";
+import { AddressUpdateComponent } from "./pages/address/address-update/address-update.component";
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { TimelineUpdateComponent } from "./pages/timeline/timeline-update/timeli
 
     AddressRegisterComponent,
     AddressListComponent,
+    AddressUpdateComponent,
     
     ServiceListComponent,
     ServiceRegisterComponent,

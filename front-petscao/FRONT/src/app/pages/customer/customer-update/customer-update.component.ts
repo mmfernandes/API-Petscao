@@ -94,7 +94,7 @@ export class CustomerUpdateComponent {
  
 
   public voltar() {
-    this.router.navigate(["pages/animal/customer-list"]);
+    this.router.navigate(["pages/customer/customer-list"]);
   }
  
 }

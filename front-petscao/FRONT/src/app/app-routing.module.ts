@@ -20,6 +20,7 @@ import { EmployeeUpdateComponent } from "./pages/employee/employee-update/employ
 import { TimelineListComponent } from "./pages/timeline/timeline-list/timeline-list.component";
 import { TimelineRegisterComponent } from "./pages/timeline/timeline-register/timeline-register.component";
 import { TimelineUpdateComponent } from "./pages/timeline/timeline-update/timeline-update.component";
+import { AddressUpdateComponent } from "./pages/address/address-update/address-update.component";
 
 
 const routes: Routes = [
@@ -120,6 +121,11 @@ const routes: Routes = [
     path: "pages/timeline/timeline-update/:id",
     component: TimelineUpdateComponent,
   },
+  {
+    path: "pages/address/address-update/:id",
+    component: AddressUpdateComponent,
+  },
+
 
   
 ];

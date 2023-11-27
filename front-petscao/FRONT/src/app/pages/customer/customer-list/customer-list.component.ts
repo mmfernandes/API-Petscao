@@ -81,4 +81,7 @@ export class CustomerListComponent {
   public openPost(){
     this.router.navigate(['pages/customer/customer-register'])
   }
+  public voltar(){
+    this.router.navigate(['pages/customer/customer-list'])
+  }
 }//end component

@@ -64,30 +64,44 @@ export class TimelineUpdateComponent {
     }
 
     alterar(): void {
-        let timeline: TimeLine = {
-            customerId: this.customerId,
-            animalId: this.animalId,
-            serviceId: this.serviceId,
-            employeeId: this.employeeId,
-            startDate: this.startDate,
-            endDate: this.endDate,
-        };
+        if (this.isValidDates()) {
+            let timeline: TimeLine = {
+                customerId: this.customerId,
+                animalId: this.animalId,
+                serviceId: this.serviceId,
+                employeeId: this.employeeId,
+                startDate: this.startDate,
+                endDate: this.endDate,
+            };
 
-        this.client
-            .put<TimeLine>(`https://localhost:5001/api/TimeLine/put/${this.timelineId}`, timeline)
-            .subscribe({
-                next: () => {
-                    this.snackBar.open("Linha de tempo alterada com sucesso!!", "PetShop", {
-                        duration: 1500,
-                        horizontalPosition: "right",
-                        verticalPosition: "top",
-                    });
-                    this.router.navigate(["pages/timeline/timeline-list"]);
-                },
-                error: (erro) => {
-                    console.log(erro);
-                },
+            this.client
+                .put<TimeLine>(`https://localhost:5001/api/TimeLine/put/${this.timelineId}`, timeline)
+                .subscribe({
+                    next: () => {
+                        this.snackBar.open("Linha de tempo alterada com sucesso!!", "PetShop", {
+                            duration: 1500,
+                            horizontalPosition: "right",
+                            verticalPosition: "top",
+                        });
+                        this.router.navigate(["pages/timeline/timeline-list"]);
+                    },
+                    error: (erro) => {
+                        console.log(erro);
+                    },
+                });
+        } else {
+            this.snackBar.open("Por favor, verifique as datas.", "", {
+                duration: 2000,
+                horizontalPosition: "right",
+                verticalPosition: "top",
             });
+        }
+    }
+
+    isValidDates(): boolean {
+        const start = new Date(this.startDate);
+        const end = new Date(this.endDate);
+        return start < end;
     }
 
     public voltar(){
