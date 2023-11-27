@@ -73,5 +73,7 @@ export class TimelineListComponent {
             },
           });
       }
-
+      public openPost(){
+        this.router.navigate(['pages/timeline/timeline-register'])
+      }
 }

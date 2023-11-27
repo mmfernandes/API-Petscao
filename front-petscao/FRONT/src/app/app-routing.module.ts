@@ -18,6 +18,8 @@ import { EmployeeListComponent } from "./pages/employee/employee-list/employee-l
 import { EmployeeRegisterComponent } from "./pages/employee/employee-register/employee-register.component";
 import { EmployeeUpdateComponent } from "./pages/employee/employee-update/employee-update.component";
 import { TimelineListComponent } from "./pages/timeline/timeline-list/timeline-list.component";
+import { TimelineRegisterComponent } from "./pages/timeline/timeline-register/timeline-register.component";
+import { TimelineUpdateComponent } from "./pages/timeline/timeline-update/timeline-update.component";
 
 
 const routes: Routes = [
@@ -109,6 +111,14 @@ const routes: Routes = [
   {
     path: "pages/timeline/timeline-list",
     component: TimelineListComponent,
+  },
+  {
+    path: "pages/timeline/timeline-register",
+    component: TimelineRegisterComponent,
+  },
+  {
+    path: "pages/timeline/timeline-update/:id",
+    component: TimelineUpdateComponent,
   },
 
   

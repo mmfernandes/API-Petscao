@@ -11,7 +11,7 @@ export interface TimeLine {
     animal?: Animal;
     serviceId: number;
     service?: Service;
-    // employeeId: number;
+    employeeId: number;
     // employee: Employee;
     startDate?: string;
     endDate?: string;

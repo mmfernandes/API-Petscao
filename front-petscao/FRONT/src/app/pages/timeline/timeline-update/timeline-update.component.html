@@ -1,0 +1,77 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Alterar TimeLine</mat-card-title>
+    </mat-card-header>
+  
+    <mat-card-content>
+      <mat-form-field class="input" id="customerId">
+        <mat-label>ID do Cliente</mat-label>
+        <input
+          placeholder="ID do cliente"
+          matInput
+          type="number"
+          [(ngModel)]="customerId"
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input" id="animalId">
+        <mat-label>ID do Animal</mat-label>
+        <input
+          placeholder="ID do animal"
+          matInput
+          type="number"
+          [(ngModel)]="animalId"
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input" id="serviceId">
+        <mat-label>ID do Serviço</mat-label>
+        <input
+          placeholder="ID do serviço"
+          matInput
+          type="number"
+          [(ngModel)]="serviceId"
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input" id="employeeId">
+        <mat-label>ID do Funcionário</mat-label>
+        <input
+          placeholder="ID do funcionário"
+          matInput
+          type="number"
+          [(ngModel)]="employeeId"
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input" id="startDate">
+        <mat-label>Data de Início</mat-label>
+        <input
+          placeholder="Data de início"
+          matInput
+          type="text"
+          [(ngModel)]="startDate"
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input" id="endDate">
+        <mat-label>Data de Término</mat-label>
+        <input
+          placeholder="Data de término"
+          matInput
+          type="text"
+          [(ngModel)]="endDate"
+        />
+      </mat-form-field>
+    </mat-card-content>
+  
+    <mat-card-actions>
+      <button mat-stroked-button color="primary" (click)="voltar()">
+        Voltar
+      </button>
+      <button color="warn" mat-stroked-button (click)="alterar()">
+        Alterar
+      </button>
+    </mat-card-actions>
+  </mat-card>
+  
